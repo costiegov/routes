@@ -1,0 +1,9 @@
+<h1>Protected</h1>
+<p>
+  Protected content by user and password
+</p>
+<div class="well" *ngIf="authService.getUser()">
+  Logged in as <b>{{ authService.getUser() }}</b>
+  <a href (click)="logout()">Log out</a>
+</div>
+
